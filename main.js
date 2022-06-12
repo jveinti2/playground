@@ -5,6 +5,7 @@ const $ = (selector) => document.querySelector(selector);
 const $html = $("#html");
 const $js = $("#js");
 const $css = $("#css");
+const $iframe = $(iframe);
 
 $html.addEventListener("input", update);
 $js.addEventListener("input", update);
@@ -12,7 +13,7 @@ $css.addEventListener("input", update);
 
 function update() {
     const html = createHtml();
-    $('iframe').setAttribute('srcdoc', html)
+    $iframe.setAttribute('srcdoc', html)
 }
 const createHtml = () => {
     const html = $html.value;
